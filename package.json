@@ -1,0 +1,13 @@
+{
+  "name": "primeiro_projeto_node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Joao Rangel <joao.vran@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
+}
