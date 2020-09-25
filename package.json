@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "Joao Rangel <joao.vran@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev:server": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts "
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
