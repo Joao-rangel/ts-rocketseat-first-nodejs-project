@@ -4,7 +4,13 @@ import { startOfHour, parseISO, isEqual } from 'date-fns';
 
 const appointmentsRouter = Router();
 
-const appointments = []; // enquanto não associa ao db
+interface Appointment {
+  id: string;
+  provider: string;
+  date: Date;
+}
+
+const appointments: Appointment[] = []; // TO DO add db
 
 appointmentsRouter.post('/', (request, response) => {
   const { provider, date } = request.body;
@@ -12,7 +18,7 @@ appointmentsRouter.post('/', (request, response) => {
   const parsedDate = startOfHour(parseISO(date));
 
   const checkAppontmentSchedule = appointments.find(appointment =>
-    isEqual(appointment, parsedDate),
+    isEqual(appointment.date, parsedDate),
   );
 
   if (checkAppontmentSchedule) {
